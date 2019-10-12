@@ -3,6 +3,8 @@
 
 import pandas as pd
 
+lemma_table = 'LEMMATIZATION LIST WITH FULL FORMS AND LEMMAS'
+
 def lemmatize(tweets, lemma_table):
 	
 	#We create lemma dict
