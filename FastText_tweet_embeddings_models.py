@@ -184,15 +184,18 @@ clf = GridSearchCV(svc, parameters, cv=5, n_jobs=4, verbose=True)
 clf.fit(x_train, y_train)
 #saving the result of grid search
 grid_result = pd.DataFrame(clf.cv_results_)
-file_name = "GRID_OOV_spa_lemmas.csv"
+file_name = "FILENAME.csv"
 grid_result.to_csv(file_name, encoding='utf-8', index=False)
-
+#select the best parameters 
+df_grid_first = grid_result.loc[grid_result['rank_test_score'] == 1] 
+C = list(df_C.pdf_grid_firstaram_C.values)
+gamma = list(df_grid_first.param_gamma.values)
 
 print("===============================================")
 print("Cross Validation")
 
 from sklearn.model_selection import cross_val_predict
-clf = SVC(gamma=1, C=10)
+clf = SVC(gamma=gamma, C=C)
 clf.fit(x_train, y_train)
 y_pred = cross_val_predict(clf, x_train, y_train, cv=10)
 target_names=["AGAINST", "FAVOR", "NEUTRAL"]
