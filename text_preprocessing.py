@@ -152,6 +152,7 @@ def normalizeLine(tokens_list):
 import emoji
 
 def remove_emoji(text):
+	""" Detects and removes emojis """
     return emoji.get_emoji_regexp().sub(u'', text)
 
 
