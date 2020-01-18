@@ -1,6 +1,6 @@
 # Stance-Detection-in-Twitter
 
-This is a part of my master thesis Stance Detection in Twitter for Spanish and Catalan. It was written during my studies in the University of the Basque Country in 2017-2019. Here I provide the machine learning models built to detect stance in short documents. 
+This is a part of my master thesis Stance Detection in Twitter for Spanish and Catalan. It was written during my studies in the University of the Basque Country in 2017-2019. Here I provide the machine learning models built to detect stance in short documents: FastText embeddings and Flair contextual embeddings. 
 
 
 
